@@ -8,9 +8,9 @@ const initialState = {
 };
 
 export const authSlice = createSlice({
-  name: "auth".
-  initalState,
-  reduc ers: {
+  name: "auth",
+  initialState,
+  reducers: {
     setMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light";
     },
@@ -41,3 +41,7 @@ export const authSlice = createSlice({
     },
   }
 })
+
+export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =
+  authSlice.actions;
+export default authSlice.reducer;
