@@ -30,7 +30,11 @@ export const authSlice = createSlice({
       }
     },
     setPosts: (state, action) => {
-      state.posts = action.payload.posts;
+      state.posts = action.payload.posts.slice(0)
+      .reverse()
+      .map((element) => {
+        return element;
+      });
     },
     setPost: (state, action) => {
       const updatedPosts = state.posts.map((post) => {
