@@ -122,7 +122,7 @@ const MyPostWidget = ({ picturePath }) => {
       <Divider sx={{ margin: "1.25rem 0" }} />
 
       <FlexBetween>
-        <FlexBetween gap="0.25rem" padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: primaryLight } }} onClick={() => setIsImage(!isImage)} >
+        <FlexBetween gap="0.25rem" padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: palette.neutral.light } }} onClick={() => setIsImage(!isImage)} >
           <ImageOutlined sx={{ color: "#45BD62" }} />
           <Typography
             color={mediumMain}
@@ -134,12 +134,12 @@ const MyPostWidget = ({ picturePath }) => {
 
         {isNonMobileScreens ? (
           <>
-            <FlexBetween gap="0.25rem" padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: primaryLight } }}>
+            <FlexBetween gap="0.25rem" padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: palette.neutral.light } }}>
               <VideocamOutlined sx={{ color: "#F02849" }} />
               <Typography color={mediumMain}>Live video</Typography>
             </FlexBetween>
 
-            <FlexBetween gap="0.25rem"  padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: primaryLight } }}>
+            <FlexBetween gap="0.25rem"  padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: palette.neutral.light } }}>
               <InsertEmoticonOutlined sx={{ color: "#F7B928" }} />
               <Typography color={mediumMain}>Feeling/activity</Typography>
             </FlexBetween>
