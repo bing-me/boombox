@@ -34,18 +34,20 @@ const ProfilePage = () => {
       <Navbar />
       <Box
         width="100%"
+        maxWidth="1600px"
+        margin="0 auto"
         padding="2rem 6%"
         display={isNonMobileScreens ? "flex" : "block"}
         gap="2rem"
         justifyContent="center"
       >
-        <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
+        <Box maxWidth="350px" flexBasis={isNonMobileScreens ? "26%" : undefined}>
           <UserWidget userId={userId} picturePath={user.picturePath} />
           <Box m="2rem 0" />
           <FriendListWidget userId={userId} />
         </Box>
         <Box
-          flexBasis={isNonMobileScreens ? "42%" : undefined}
+          flexBasis={isNonMobileScreens ? "62%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
           <MyPostWidget picturePath={user.picturePath} />
