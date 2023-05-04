@@ -17,7 +17,7 @@ export const users = [
     firstName: "test",
     lastName: "me",
     email: "aaaaaaa@gmail.com",
-    password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+    password: "123123",
     picturePath: "p11.jpeg",
     friends: [],
     location: "San Fran, CA",
