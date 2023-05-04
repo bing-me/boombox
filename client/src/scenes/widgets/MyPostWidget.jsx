@@ -1,10 +1,9 @@
 import {
   EditOutlined,
   DeleteOutlined,
-  AttachFileOutlined,
-  GifBoxOutlined,
   ImageOutlined,
-  MicOutlined,
+  VideocamOutlined,
+  InsertEmoticonOutlined,
   MoreHorizOutlined,
 } from "@mui/icons-material";
 import {
@@ -36,6 +35,7 @@ const MyPostWidget = ({ picturePath }) => {
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   const mediumMain = palette.neutral.mediumMain;
   const medium = palette.neutral.medium;
+  const primaryLight = palette.primary.light;
 
   const handlePost = async () => {
     const formData = new FormData();
@@ -67,6 +67,7 @@ const MyPostWidget = ({ picturePath }) => {
           value={post}
           sx={{
             width: "100%",
+            color: palette.background.main,
             backgroundColor: palette.neutral.light,
             borderRadius: "2rem",
             padding: "1rem 2rem",
@@ -121,31 +122,26 @@ const MyPostWidget = ({ picturePath }) => {
       <Divider sx={{ margin: "1.25rem 0" }} />
 
       <FlexBetween>
-        <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
-          <ImageOutlined sx={{ color: mediumMain }} />
+        <FlexBetween gap="0.25rem" padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: primaryLight } }} onClick={() => setIsImage(!isImage)} >
+          <ImageOutlined sx={{ color: "#45BD62" }} />
           <Typography
             color={mediumMain}
             sx={{ "&:hover": { cursor: "pointer", color: medium } }}
           >
-            Image
+            Photo/video
           </Typography>
         </FlexBetween>
 
         {isNonMobileScreens ? (
           <>
-            <FlexBetween gap="0.25rem">
-              <GifBoxOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Clip</Typography>
+            <FlexBetween gap="0.25rem" padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: primaryLight } }}>
+              <VideocamOutlined sx={{ color: "#F02849" }} />
+              <Typography color={mediumMain}>Live video</Typography>
             </FlexBetween>
 
-            <FlexBetween gap="0.25rem">
-              <AttachFileOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Attachment</Typography>
-            </FlexBetween>
-
-            <FlexBetween gap="0.25rem">
-              <MicOutlined sx={{ color: mediumMain }} />
-              <Typography color={mediumMain}>Audio</Typography>
+            <FlexBetween gap="0.25rem"  padding="1rem" borderRadius="12px" sx={{ "&:hover": { background: primaryLight } }}>
+              <InsertEmoticonOutlined sx={{ color: "#F7B928" }} />
+              <Typography color={mediumMain}>Feeling/activity</Typography>
             </FlexBetween>
           </>
         ) : (
@@ -161,6 +157,10 @@ const MyPostWidget = ({ picturePath }) => {
             color: palette.background.alt,
             backgroundColor: palette.primary.main,
             borderRadius: "3rem",
+            "&:hover": {
+              color: palette.background.alt,
+              backgroundColor: palette.primary.dark,
+             }
           }}
         >
           POST

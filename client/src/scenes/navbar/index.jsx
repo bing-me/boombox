@@ -57,14 +57,17 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Boombox
         </Typography>
+        </FlexBetween>
+
         {isNonMobileScreens && (
           <FlexBetween
             backgroundColor={neutralLight}
-            borderRadius="9px"
+            borderRadius="18px"
             gap="3rem"
             padding="0.1rem 1.5rem"
+            minWidth="400px"
           >
             <InputBase placeholder="Search..." />
             <IconButton>
@@ -72,7 +75,6 @@ const Navbar = () => {
             </IconButton>
           </FlexBetween>
         )}
-      </FlexBetween>
 
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
