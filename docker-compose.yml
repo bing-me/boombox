@@ -2,11 +2,15 @@ version: '3.4'
 
 services:
   client:
-    image: client
-    build:
-      context: client
-      dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: production
+    image: react-app
+    build: ./client/
+    stdin_open: true
     ports:
       - 3000:3000
+
+  api-server:
+    image: api-server
+    build: ./server/
+    ports:
+     - 3001:3001
+    env_file: ./server/.env
