@@ -7,6 +7,9 @@ services:
     stdin_open: true
     ports:
       - 3000:3000
+    volumes:
+      - ./client/:/usr/src/app
+      - /usr/src/app/node_modules
 
   api-server:
     image: api-server
@@ -14,3 +17,6 @@ services:
     ports:
      - 3001:3001
     env_file: ./server/.env
+    volumes:
+      - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
