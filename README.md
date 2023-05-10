@@ -35,6 +35,10 @@ The app was built using the following technologies:
 
 As this project is a proof-of-concept demo, the features are limited.
 
+## Live link
+
+https://boomboxreact.onrender.com/
+
 ## Demo account
 
 Email: jack@live.com
