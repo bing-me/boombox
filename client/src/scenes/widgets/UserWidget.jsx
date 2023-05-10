@@ -11,7 +11,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import API_URL from '../../api';
+const API_URL = process.env.REACT_APP_API_URL
 
 const UserWidget = ({ userId, picturePath }) => {
   const [user, setUser] = useState(null);
