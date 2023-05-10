@@ -10,7 +10,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`${API_URL}/assets/${image}`}
+        src={`${API_URL}assets/${image}`}
       />
     </Box>
   );
