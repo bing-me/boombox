@@ -10,4 +10,6 @@ COPY . .
 
 EXPOSE 3000
 
+ENV REACT_APP_BASE_URL=https://localhost:3001/api
+
 CMD ["npm", "start"]
