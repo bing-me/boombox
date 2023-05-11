@@ -1,4 +1,4 @@
-# boombox
+# Boombox
 
 Boombox is a social network meant to look similar to a social media website that millenials would have you believe that do not use, in spite of the largest demographic on the site being millenials.
 
@@ -34,6 +34,7 @@ The app was built using the following technologies:
 ## Known issues
 
 As this project is a proof-of-concept demo, the features are limited.
+Using Boombox may lead to countless hours of scrolling through posts, and a sudden urge to start using words like 'lit' and 'fam' unironically. Proceed with caution.
 
 ## Live link
 
